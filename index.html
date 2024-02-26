@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== CSS ============ -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <h1 class="titulo">Calculadora en JS</h1>
+
+    <section class="calculadora">
+        <div class="color">
+            <label class="switch-container">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+        </div>
+        <input type="text" id="pantalla" readonly>
+        <div>
+            <input type="button" value="←" onclick="borrarDigito()">
+            <input type="button" value="/" onclick="agregarALaPantalla('/')">
+            <input type="button" value="*" onclick="agregarALaPantalla('*')">
+            <input type="button" value="-" onclick="agregarALaPantalla('-')">
+        </div>
+        <div>
+            <div class="contenedor_btn">
+                <div>
+                    <input type="button" value="7" onclick="agregarALaPantalla('7')">
+                    <input type="button" value="8" onclick="agregarALaPantalla('8')">
+                    <input type="button" value="9" onclick="agregarALaPantalla('9')">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="agregarALaPantalla('4')">
+                    <input type="button" value="5" onclick="agregarALaPantalla('5')">
+                    <input type="button" value="6" onclick="agregarALaPantalla('6')">
+                </div>
+            </div>
+            <input id="btn_mas" type="button" value="+" onclick="agregarALaPantalla('+')">
+        </div>
+
+        
+        <div>
+            <div class="contenedor_btn">
+                <div>
+                    <input type="button" value="1" onclick="agregarALaPantalla('1')">
+                    <input type="button" value="2" onclick="agregarALaPantalla('2')">
+                    <input type="button" value="3" onclick="agregarALaPantalla('3')">
+                </div>
+                <div>
+                    <input type="button" value="C" onclick="limpiarPantalla()">
+                    <input type="button" value="0" onclick="agregarALaPantalla('0')">
+                    <input type="button" value="." onclick="agregarALaPantalla('.')">
+                </div>
+            </div>
+            <input id="btn_igual" type="button" value="=" onclick="calcular()">
+        </div>
+        <div id="mensajeError""></div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
