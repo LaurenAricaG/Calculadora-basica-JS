@@ -17,51 +17,50 @@
     <section class="calculadora">
         <div class="color">
             <label class="switch-container">
-                <input type="checkbox">
+                <input type="checkbox" id="toggleSwitch">
                 <span class="slider"></span>
               </label>
         </div>
-        <input type="text" id="pantalla" readonly>
+        <input type="text" id="pantalla" class="pantalla_resultado" readonly>
         <div>
             <input type="button" value="←" onclick="borrarDigito()">
-            <input type="button" value="/" onclick="agregarALaPantalla('/')">
-            <input type="button" value="*" onclick="agregarALaPantalla('*')">
-            <input type="button" value="-" onclick="agregarALaPantalla('-')">
+            <input type="button" value="/" onclick="agregarALaPantalla('/')" class="boton_normal">
+            <input type="button" value="*" onclick="agregarALaPantalla('*')" class="boton_normal">
+            <input type="button" value="-" onclick="agregarALaPantalla('-')" class="boton_normal">
         </div>
         <div>
             <div class="contenedor_btn">
                 <div>
-                    <input type="button" value="7" onclick="agregarALaPantalla('7')">
-                    <input type="button" value="8" onclick="agregarALaPantalla('8')">
-                    <input type="button" value="9" onclick="agregarALaPantalla('9')">
+                    <input type="button" value="7" onclick="agregarALaPantalla('7')" class="boton_normal">
+                    <input type="button" value="8" onclick="agregarALaPantalla('8')" class="boton_normal">
+                    <input type="button" value="9" onclick="agregarALaPantalla('9')" class="boton_normal">
                 </div>
                 <div>
-                    <input type="button" value="4" onclick="agregarALaPantalla('4')">
-                    <input type="button" value="5" onclick="agregarALaPantalla('5')">
-                    <input type="button" value="6" onclick="agregarALaPantalla('6')">
+                    <input type="button" value="4" onclick="agregarALaPantalla('4')" class="boton_normal">
+                    <input type="button" value="5" onclick="agregarALaPantalla('5')" class="boton_normal">
+                    <input type="button" value="6" onclick="agregarALaPantalla('6')" class="boton_normal">
                 </div>
             </div>
-            <input id="btn_mas" type="button" value="+" onclick="agregarALaPantalla('+')">
+            <input id="btn_mas" type="button" value="+" onclick="agregarALaPantalla('+')" class="boton_normal">
         </div>
-
-        
         <div>
             <div class="contenedor_btn">
                 <div>
-                    <input type="button" value="1" onclick="agregarALaPantalla('1')">
-                    <input type="button" value="2" onclick="agregarALaPantalla('2')">
-                    <input type="button" value="3" onclick="agregarALaPantalla('3')">
+                    <input type="button" value="1" onclick="agregarALaPantalla('1')" class="boton_normal">
+                    <input type="button" value="2" onclick="agregarALaPantalla('2')" class="boton_normal">
+                    <input type="button" value="3" onclick="agregarALaPantalla('3')" class="boton_normal">
                 </div>
                 <div>
                     <input type="button" value="C" onclick="limpiarPantalla()">
-                    <input type="button" value="0" onclick="agregarALaPantalla('0')">
-                    <input type="button" value="." onclick="agregarALaPantalla('.')">
+                    <input type="button" value="0" onclick="agregarALaPantalla('0')" class="boton_normal">
+                    <input type="button" value="." onclick="agregarALaPantalla('.')" class="boton_normal">
                 </div>
             </div>
             <input id="btn_igual" type="button" value="=" onclick="calcular()">
         </div>
-        <div id="mensajeError""></div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 
 </body>
